@@ -1,0 +1,108 @@
+/* Basic CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Form container styling */
+  .formContainer {
+    width: 500px;
+    margin: 20px auto;
+    margin-top: 60px;
+  }
+  
+  /* Title styling */
+  .formTitle {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px; /* Adjusted margin to reduce distance */
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+  }
+  
+  /* Basic form styling */
+  .myform {
+    border: 5px solid ghostwhite;
+    padding: 20px;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style for labels */
+  .label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  /* Style for text inputs */
+  .inputText,
+  .inputDate {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Style for radio buttons and labels */
+  .radio {
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+  
+  .radioLabel {
+    margin-right: 15px;
+  }
+  
+  .radioContainer {
+    margin-bottom: 10px;
+  }
+  
+  .radioGroup {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .radioGroup div {
+    margin-right: 20px;
+  }
+  
+  /* Button styling */
+  .button {
+    background-color: #000;
+    color: white;
+    border: 1.2px white solid;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.4s ease, border-color 0.4s ease;
+  }
+  
+  .button:hover {
+    background-color: #333;
+    border-color: black;
+  }
+  
+  /* Error styling */
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .errorInput {
+    border-color: red;
+    background-color: #ffe6e6; /* Light red background for error fields */
+  }
+  
+  
+  
