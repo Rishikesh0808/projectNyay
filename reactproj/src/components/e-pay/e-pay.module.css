@@ -1,108 +1,127 @@
-/* Basic CSS Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* e-pay.module.css */
+
+.Main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f7f7f7; /* Light background color */
+  padding: 20px;
+}
+
+.formContainer {
+  background-color: #fff; /* White background for the form */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 500px; /* Set a maximum width */
+}
+
+.formTitle {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center; /* Center the title */
+}
+
+.myform {
+  display: flex;
+  flex-direction: column;
+}
+
+.fieldset {
+  border: none; /* Remove border */
+  margin-bottom: 20px;
+}
+
+.legend {
+  font-size: 18px;
+  font-weight: bold; /* Make legend bold */
+  margin-bottom: 10px;
+}
+
+.label {
+  color:black;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.inputText,
+.inputDate {
+  padding: 10px;
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  width: 100%; /* Full width */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.radio {
+  margin-right: 5px; /* Space between radio and label */
+}
+
+.radioLabel {
+  color:black;
+  margin-right:7px;
+}
+.genderContainer {
+  display: flex; /* Use flexbox for alignment */
+  flex-direction:row;
+  align-items:center;
+  margin-bottom: 15px; /* Space below the gender selection */
+}
+
+.error {
+  color: red;
+  font-size: 14px; /* Smaller error message */
+}
+
+.errorInput {
+  border: 1px solid red; /* Red border for error */
+}
+
+.button {
+  background-color: #007bff; /* Primary button color */
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.loadingOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8); /* Light overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingSpinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #007bff; /* Primary color */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  /* Form container styling */
-  .formContainer {
-    width: 500px;
-    margin: 20px auto;
-    margin-top: 60px;
+  100% {
+    transform: rotate(360deg);
   }
-  
-  /* Title styling */
-  .formTitle {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 10px; /* Adjusted margin to reduce distance */
-    color: #333;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-  }
-  
-  /* Basic form styling */
-  .myform {
-    border: 5px solid ghostwhite;
-    padding: 20px;
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-    color: #333;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Style for labels */
-  .label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  /* Style for text inputs */
-  .inputText,
-  .inputDate {
-    width: 100%;
-    padding: 8px;
-    font-size: 14px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  /* Style for radio buttons and labels */
-  .radio {
-    margin-right: 5px;
-    vertical-align: middle;
-  }
-  
-  .radioLabel {
-    margin-right: 15px;
-  }
-  
-  .radioContainer {
-    margin-bottom: 10px;
-  }
-  
-  .radioGroup {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .radioGroup div {
-    margin-right: 20px;
-  }
-  
-  /* Button styling */
-  .button {
-    background-color: #000;
-    color: white;
-    border: 1.2px white solid;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.4s ease, border-color 0.4s ease;
-  }
-  
-  .button:hover {
-    background-color: #333;
-    border-color: black;
-  }
-  
-  /* Error styling */
-  .error {
-    color: red;
-    font-size: 12px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-  }
-  
-  .errorInput {
-    border-color: red;
-    background-color: #ffe6e6; /* Light red background for error fields */
-  }
-  
-  
-  
+}

@@ -1,154 +1,200 @@
-/* home.module.css */
-
 /* Basic CSS Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Styling the navigation bar */
-  .navbar {
-    padding: 20px;
-    background-color: black;
-    overflow: hidden;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styling the navigation bar */
+.navbar {
+  padding: 20px;
+  background-color: black;
+  overflow: hidden;
+}
+
+.tit {
+  float: left;
+  font-size: 48px;
+  font-family: serif;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+}
+
+/* Style the links inside the navigation bar */
+.navbar a {
+  font-family: sans-serif;
+  float: right;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #333;
+}
+
+/* Dropdown button and content */
+.dropbtn {
+  background-color: black;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  float: right; /* Floats the button to the right */
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  float: right; /* Floats the dropdown to the right */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  font-family: sans-serif;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: 0; /* Ensures dropdown aligns to the right */
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  display: block;
+  text-align: left; /* Align text to the left within the dropdown */
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Image container styles */
+.imageContainer {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Center items with even space between */
+  gap: 20px; /* Adjust gap between items */
+}
+
+.indimg {
+  width: 325px; /* Adjust width as needed */
+  max-width: 100%; /* Prevent images from exceeding their container's width */
+  position: relative;
+}
+
+.indimg img {
+  width: 100%; /* Ensure images take full width of their container */
+  max-width: 100%; /* Prevent images from exceeding their container's width */
+  border: 5px white solid;
+  transition: transform 0.3s ease; /* Smooth transition for transform property */
+}
+
+.indimg:hover img {
+  transform: scale(1.057); /* Increase size on hover */
+}
+
+.indimg figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  box-sizing: border-box;
+  text-align: center; /* Center text horizontally */
+}
+
+.indimg:hover figcaption {
+  opacity: 1;
+}
+
+/* Footer styles */
+.footerContainer {
+  background-color: black;
+  color: white;
+  margin-top: 30px;
+}
+
+.topfooter {
+  /* Add any specific styles for the top footer if needed */
+}
+
+.bottomfooter {
+  background-color: #333; /* Dark background color */
+}
+
+.fooimg {
+  /* Add styles for the footer image if needed */
+}
+
+.gp-b, .app-store-b {
+  /* Add styles for Google Play and App Store images if needed */
+}
+
+/* Responsive Styles */
+
+/* For tablets and small devices (min-width: 768px) */
+@media (max-width: 768px) {
   .tit {
-    float: left;
-    font-size: 48px;
-    font-family: serif;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
+      font-size: 36px; /* Adjust font size for smaller screens */
+      padding: 10px 15px; /* Adjust padding */
   }
-  
-  /* Style the links inside the navigation bar */
+
   .navbar a {
-    font-family: sans-serif;
-    float: right;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
+      float: none; /* Stack navigation links vertically */
+      display: block;
+      text-align: left; /* Align text to the left */
   }
-  
-  /* Change color on hover */
-  .navbar a:hover {
-    background-color: #333;
-  }
-  
-  /* Dropdown button and content */
-  .dropbtn {
-    background-color: black;
-    color: white;
-    padding: 12px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    float: right; /* Floats the button to the right */
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-    float: right; /* Floats the dropdown to the right */
-  }
-  
+
   .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    font-family: sans-serif;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    right: 0; /* Ensures dropdown aligns to the right */
+      min-width: 100%; /* Ensure dropdown content is full width on small screens */
   }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    display: block;
-    text-align: left; /* Align text to the left within the dropdown */
-    text-decoration: none;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: #f1f1f1;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  /* Image container styles */
+
   .imageContainer {
-    margin-top: 50px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; /* Center items with even space between */
-    gap: 20px; /* Adjust gap between items */
+      flex-direction: column; /* Stack images vertically */
   }
-  
+
   .indimg {
-    width: 325px; /* Adjust width as needed */
-    max-width: 100%; /* Prevent images from exceeding their container's width */
-    position: relative;
+      width: 100%; /* Make images full width on small screens */
   }
-  
-  .indimg img {
-    width: 100%; /* Ensure images take full width of their container */
-    max-width: 100%; /* Prevent images from exceeding their container's width */
-    border: 5px white solid;
-    transition: transform 0.3s ease; /* Smooth transition for transform property */
+}
+
+/* For mobile devices (min-width: 480px) */
+@media (max-width: 480px) {
+  .tit {
+      font-size: 24px; /* Further reduce font size for very small screens */
+      padding: 8px 10px; /* Further reduce padding */
   }
-  
-  .indimg:hover img {
-    transform: scale(1.057); /* Increase size on hover */
+
+  .navbar a {
+      padding: 10px; /* Adjust padding */
   }
-  
-  .indimg figcaption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 10px;
-    margin: 0;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    box-sizing: border-box;
-    text-align: center; /* Center text horizontally */
+
+  .dropbtn {
+      font-size: 14px; /* Adjust button font size */
+      padding: 10px; /* Adjust button padding */
   }
-  
-  .indimg:hover figcaption {
-    opacity: 1;
+
+  .dropdown-content a {
+      padding: 10px; /* Adjust padding for dropdown links */
   }
-  
-  /* Footer styles */
-  .footerContainer {
-    background-color: black;
-    color: white;
-    margin-top: 30px;
-  }
-  
-  .topfooter {
-    /* Add any specific styles for the top footer if needed */
-  }
-  
-  .bottomfooter {
-    background-color: #333; /* Dark background color */
-  }
-  
-  .fooimg {
-    /* Add styles for the footer image if needed */
-  }
-  
-  .gp-b, .app-store-b {
-    /* Add styles for Google Play and App Store images if needed */
-  }
-  
+}

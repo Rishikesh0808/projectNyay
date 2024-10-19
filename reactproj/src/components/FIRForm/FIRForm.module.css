@@ -1,0 +1,92 @@
+/* FIRForm.module.css - Black & White theme with modern design */
+
+.formContainer {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 10px;
+  }
+  
+  .formGroup {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #666;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    transition: border 0.3s ease;
+  }
+  
+  input:focus,
+  textarea:focus,
+  select:focus {
+    border-color: #00aaff;
+    outline: none;
+  }
+  
+  textarea {
+    height: 100px;
+    resize: both;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00aaff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0088cc;
+  }
+  
+  button:active {
+    background-color: #0077b3;
+  }
+  
+  @media (max-width: 600px) {
+    .formContainer {
+      padding: 20px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  }
+  

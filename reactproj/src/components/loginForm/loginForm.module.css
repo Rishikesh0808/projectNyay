@@ -1,0 +1,71 @@
+/* App.module.css */
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000; /* Dark gray background for the entire page */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+  }
+  
+  .loginForm {
+    background:  #fff; /* Black background for the form */
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Slightly stronger shadow for better contrast */
+    max-width: 100%; /* Form width adjusts to screen size */
+    width: 400px; /* Default width for larger screens */
+    color: #000; /* White text color for better readability */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
+  .formGroup {
+    margin-bottom: 1rem;
+  }
+  
+  .formGroupLabel {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #000; /* Light gray color for labels */
+  }
+  
+  .formGroupInput {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #555; /* Darker border color */
+    border-radius: 3px;
+    background-color: #000; /* Dark background for input fields */
+    color: #fff; /* White text color for input fields */
+  }
+  
+  .button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background-color: #fff; /* Blue background for the button */
+    color: #000; /* White text color for the button */
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .buttonHover:hover {
+    background-color: #ac96962a; /* Darker blue on hover */
+  }
+  
+  .errorMessage {
+    color: #ff0000; /* Red color for error messages */
+    margin: 1rem 0;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 600px) {
+    .loginForm {
+      width: 90%; /* Adjust form width for smaller screens */
+      padding: 1rem; /* Reduce padding for smaller screens */
+    }
+  
+    .button {
+      padding: 0.5rem 1rem; /* Adjust button size for smaller screens */
+    }
+  }
+  

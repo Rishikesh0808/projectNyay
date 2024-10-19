@@ -17,12 +17,12 @@ const Home = () => {
         <div className={styles.dropdown}>
           
         </div>
-        <a href="#home">Home</a>
+        
       </div>
 
       <div className={styles.imageContainer}>
         <div className={styles.indimg}>
-          <img src="./law-firm-justice-logo_231093-186.avif" alt="Description of the image" />
+          <img src="./law-firm-justice-logo_231093-186.avif" alt="Description of the image" onClick={()=>{navigate('/FIR')}}/>
           <figcaption>FILE FIR</figcaption>
         </div>
         <div className={styles.indimg}>
@@ -40,7 +40,7 @@ const Home = () => {
           <div className="row">
             <div className="col-md-3 borderright"></div>
             <div className="col-md-6">
-              <div className="align-middle" aria-role="complementary" id="complementary">
+              <div className="align-middle" role="complementary" id="complementary">
                 <a href="https://www.nic.in/" title="National Informatics Centre External website that opens a new window" rel="noopener noreferrer">
                   <img className={styles.fooimg} src="images/nic-logo.png" alt="National Informatics Centre External website that opens a new window" />
                 </a>
