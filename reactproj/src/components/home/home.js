@@ -25,7 +25,7 @@ const Home = () => {
           <img src="./law-firm-justice-logo_231093-186.avif" alt="Description of the image" onClick={()=>{navigate('/FIR')}}/>
           <figcaption>FILE FIR</figcaption>
         </div>
-        <div className={styles.indimg}>
+        <div className={styles.indimg} onClick={()=>{navigate('/trackstatus')}}>
           <img src="./tender_17208165.jpg" alt="Description of the image" />
           <figcaption>Track Status</figcaption>
         </div>

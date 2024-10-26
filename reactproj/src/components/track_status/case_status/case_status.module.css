@@ -1,0 +1,88 @@
+/* Container for the entire component */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Heading styling for "Case Status" */
+.heading {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #004080;
+    text-transform:uppercase;
+    margin-bottom: 20px;
+}
+
+/* Error message styling */
+.error {
+    color: #cc0000;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Loading message styling */
+.loading {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+}
+
+/* Table container styling for responsive design */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+/* Table styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.th, .td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s;
+}
+
+/* Header cell styling */
+.th {
+    background-color: #004080; /* Dark blue for header background */
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Data cell styling */
+.td {
+    background-color: #f9f9f9; /* Light grey for rows */
+}
+
+/* Hover effect for rows */
+.table tr:hover .td {
+    background-color: #e6f2ff; /* Slight blue for row hover */
+}
+
+/* Alternating row colors for improved readability */
+.table tr:nth-child(even) .td {
+    background-color: #f2f6fa;
+}
+
+/* Responsive font size */
+@media screen and (max-width: 768px) {
+    .th, .td {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

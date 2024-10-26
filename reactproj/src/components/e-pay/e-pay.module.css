@@ -1,27 +1,27 @@
-/* e-pay.module.css */
-
 .Main {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f7f7f7; /* Light background color */
-  padding: 20px;
+  background: linear-gradient(to bottom, gray,beige);/* Light gray gradient */
 }
 
-.formContainer {
-  background-color: #fff; /* White background for the form */
+.card {
+  background-color: white;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  width: 100%;
-  max-width: 500px; /* Set a maximum width */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 40px; /* Increased padding for a larger card */
+  max-width: 600px; /* Maximum width of the card */
+  width: 100%; /* Full width for smaller screens */
+  margin: 20px; /* Margin to prevent touching edges */
+  border: 1px solid #e0e0e0; /* Light border for definition */
 }
 
 .formTitle {
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 2em; /* Increased font size for the title */
+  margin-bottom: 20px; /* Space below the title */
   text-align: center; /* Center the title */
+  color: #800020;
 }
 
 .myform {
@@ -30,98 +30,80 @@
 }
 
 .fieldset {
-  border: none; /* Remove border */
-  margin-bottom: 20px;
-}
-
-.legend {
-  font-size: 18px;
-  font-weight: bold; /* Make legend bold */
-  margin-bottom: 10px;
+  border: none; /* Remove default border */
+  margin-bottom: 20px; /* Space between fieldsets */
 }
 
 .label {
-  color:black;
-  font-size: 16px;
-  margin-bottom: 5px;
+  font-weight: bold; /* Bold labels for better visibility */
+  margin-bottom: 5px; /* Space below labels */
+  margin-right:15px;
 }
 
 .inputText,
-.inputDate {
-  padding: 10px;
-  border: 1px solid #ccc; /* Light border */
-  border-radius: 4px;
-  margin-bottom: 10px;
-  font-size: 16px;
-  width: 100%; /* Full width */
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
-}
-
-.radio {
-  margin-right: 5px; /* Space between radio and label */
-}
-
-.radioLabel {
-  color:black;
-  margin-right:7px;
-}
-.genderContainer {
-  display: flex; /* Use flexbox for alignment */
-  flex-direction:row;
-  align-items:center;
-  margin-bottom: 15px; /* Space below the gender selection */
-}
-
-.error {
-  color: red;
-  font-size: 14px; /* Smaller error message */
-}
-
-.errorInput {
-  border: 1px solid red; /* Red border for error */
+.inputDate,
+.select {
+  padding: 10px; /* Padding for inputs */
+  border: 1px solid #ccc; /* Border for inputs */
+  border-radius: 4px; /* Rounded corners */
+  margin-bottom: 10px; /* Space below inputs */
+  width: 100%; /* Full width for inputs */
 }
 
 .button {
-  background-color: #007bff; /* Primary button color */
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  padding: 12px 20px; /* Increased padding for button */
+  background-color: #800020; /* Primary button color */
+  color: white; /* Text color for button */
+  border: none; /* No border for button */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition */
 }
 
 .button:hover {
-  background-color: #0056b3; /* Darker shade on hover */
+  background-color: #38010f; /* Darker shade on hover */
+  transform: scale(1.02); /* Scale on hover */
 }
 
+.error {
+  color: red; /* Red color for error messages */
+  font-size: 0.875em; /* Smaller font size for error messages */
+  margin-top: -5px; /* Negative margin to move it closer */
+}
+
+/* Loading spinner styles */
 .loadingOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(255, 255, 255, 0.8); /* Light overlay */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: fixed; /* Fixed position for overlay */
+  top: 0; /* Full height */
+  left: 0; /* Full width */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+  display: flex; /* Flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
 .loadingSpinner {
-  border: 4px solid rgba(0, 0, 0, 0.1);
-  border-left-color: #007bff; /* Primary color */
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  animation: spin 1s linear infinite;
+  border: 4px solid rgba(0, 0, 0, 0.1); /* Light border */
+  border-top: 4px solid #007bff; /* Color for the spinner */
+  border-radius: 50%; /* Circular shape */
+  width: 40px; /* Spinner size */
+  height: 40px; /* Spinner size */
+  animation: spin 1s linear infinite; /* Spin animation */
 }
 
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Additional styles for radio buttons */
+.genderContainer {
+  display: flex;
+  margin-bottom: 10px; /* Space below the gender options */
+}
+
+.radio {
+  margin-right: 5px; /* Space between the radio button and label */
 }

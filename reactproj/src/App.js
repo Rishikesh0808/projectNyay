@@ -7,6 +7,8 @@ import LoginForm from './components/loginForm/loginForm';
 import UpdatedPayment from './components/e-pay/updatedpayment/updatedpayment';
 import FIRForm from './components/FIRForm/FIRForm';
 import  Filed from './components/filed/filed'
+import Case_status from './components/track_status/case_status/case_status'
+import Track_status from './components/track_status/track_status';
 const App = () => {
   return (
     
@@ -20,6 +22,8 @@ const App = () => {
         <Route path="/epay" element={<EpayForm />} />
         <Route path="/FIR" element={<FIRForm />} />
         <Route path="/filed" element={<Filed />} />
+        <Route path="/trackstatus" element={<Track_status />} />
+        <Route path="/case/:caseNumber" element={<Case_status />} />
       </Routes>
     </Router>
   );

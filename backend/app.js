@@ -4,6 +4,7 @@ const connectDB = require('./db/db'); // Ensure this path is correct
 const authRoutes = require('./routes/auth.route'); // Import auth routes
 const paymentRoutes = require('./routes/payment.route'); // Import payment routes
 const petRoutes=require('./routes/petiton.route');
+const trackRoutes=require('./routes/cases.route');
 const cors = require('cors');
 const jwtmiddleware=require('./middleware/jwtverification')
 // Initialize environment variables
@@ -23,10 +24,11 @@ connectDB().then(() => {
 // Middleware
 app.use(express.json()); // For parsing application/json
 app.use(cors());
-app.use(jwtmiddleware);
+//app.use(jwtmiddleware);
 // Routes
 app.use('', authRoutes); // Use auth routes
 app.use('', paymentRoutes); // Use payment routes
 app.use('',petRoutes)
+app.use('', trackRoutes)
 
 module.exports = app;
