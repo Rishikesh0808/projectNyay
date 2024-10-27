@@ -122,7 +122,21 @@ const FIRForm = () => {
                 className={styles.select}
               >
                 <option value="">-- Select --</option>
-                {/* Add optgroups and options as per your list */}
+                <optgroup label="Adilabad">
+        <option value="adilabad1">Adilabad Town Police Station</option>
+        <option value="adilabad2">Mancherial Police Station</option>
+        <option value="adilabad3">Nirmal Police Station</option>
+    </optgroup>
+    <optgroup label="Hyderabad">
+        <option value="hyderabad1">Hyderabad City Police</option>
+        <option value="hyderabad2">Banjara Hills Police Station</option>
+        <option value="hyderabad3">Gachibowli Police Station</option>
+    </optgroup>
+    <optgroup label="Karimnagar">
+        <option value="karimnagar1">Karimnagar Town Police Station</option>
+        <option value="karimnagar2">Jagtiyal Police Station</option>
+        <option value="karimnagar3">Huzurabad Police Station</option>
+    </optgroup>
               </select>
             </div>
 

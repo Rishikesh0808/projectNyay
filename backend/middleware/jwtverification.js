@@ -2,7 +2,7 @@ const jwt=require('jsonwebtoken')
 const dotenv=require('dotenv');
 dotenv.config();
 const jwtmiddleware= (req,res,next)=>{
-    if(req.path=='/login')
+    if(req.path=='/login'||req.path=='/register')
     {
         return next();
     }

@@ -8,44 +8,17 @@
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
   }
-  .register{
-    padding: 0.75rem 1.5rem;
-    border: none;
-    background-color: #fff; /* Blue background for the button */
-    color: #000; /* White text color for the button */
-    border-radius: 3px;
-    cursor: pointer;
-    margin-left:auto;
-  }
-  .buttoncontainer
-  {
-     display:flex;
-  }
-  .formGroup {
-    margin-bottom: 15px;
+  h1::before,
+h1::after {
+    content: ""; /* Create a pseudo-element */
+    display: inline-block; /* Allow for sizing */
+    width: 100px; /* Length of the line */
+    height: 2px; /* Thickness of the line */
+    background-color: white; /* Color of the line */
+    margin: 0 20px; /* Space between the lines and title */
+    vertical-align: middle; /* Align vertically with the title */
 }
-
-.formGroupLabel {
-    display: block;
-    margin-bottom: 5px;
-    margin-right:10px;
-}
-
-input[type="radio"] {
-    margin-right: 6px;
-    
-}
-.label{
-margin-right:8px;
-}
-
-  .container{
-    display:flex;
-    flex-direction:column;
-    align-items: center;
-    justify-content: center;
-  }
-  h1 {
+h1 {
     text-align: center;
     font-weight: bold;
     font-size: 3.5em; /* Increased font size */
@@ -59,17 +32,25 @@ margin-right:8px;
     padding: 10px; /* Padding around the text */
     border-radius: 5px; /* Rounded corners */
 }
-h1::before,
-h1::after {
-    content: ""; /* Create a pseudo-element */
-    display: inline-block; /* Allow for sizing */
-    width: 100px; /* Length of the line */
-    height: 2px; /* Thickness of the line */
-    background-color: white; /* Color of the line */
-    margin: 0 20px; /* Space between the lines and title */
-    vertical-align: middle; /* Align vertically with the title */
-}
-
+.container{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+  }
+  .register{
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background-color: #fff; /* Blue background for the button */
+    color: #000; /* White text color for the button */
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left:auto;
+  }
+  .buttoncontainer
+  {
+     display:flex;
+  }
   .loginForm {
     background:  #fff; /* Black background for the form */
     padding: 2rem;
