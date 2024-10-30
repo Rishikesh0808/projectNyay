@@ -1,0 +1,11 @@
+.Policeview2 {
+    height: 100vh; /* Full height */
+    background-color: white; /* Background color */
+    color: black; /* Text color */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centering the content */
+    align-items: center; /* Aligning content to center */
+    padding: 20px; /* Padding around the content */
+  }
+  

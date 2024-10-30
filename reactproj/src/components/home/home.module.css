@@ -38,48 +38,33 @@
 }
 
 /* Dropdown button and content */
-.dropbtn {
-  background-color: black;
-  color: white;
-  padding: 12px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  float: right; /* Floats the button to the right */
-}
 
-.dropdown {
+
+.buttons {
   position: relative;
-  display: inline-block;
+  left:-65px;
+  bottom:-50px;
   float: right; /* Floats the dropdown to the right */
+  color:white;
+  cursor:pointer;
+  font-size:0.8em;
+ padding:2.5px;
+ margin-right:4.5px;
+ margin-left:4.5px;
+  border-radius: 4.5px;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  font-family: sans-serif;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  right: 0; /* Ensures dropdown aligns to the right */
+.buttons:hover {
+ background-color: gray;
+ 
+ transition-duration: 0.4s;
+  
 }
 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  display: block;
-  text-align: left; /* Align text to the left within the dropdown */
-  text-decoration: none;
-}
 
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+
+
 
 /* Image container styles */
 .imageContainer {
@@ -89,13 +74,19 @@
   flex-wrap: wrap;
   justify-content: space-around; /* Center items with even space between */
   gap: 20px; /* Adjust gap between items */
+  position: relative; /* Ensure it does not escape the flow */
+  z-index: 1; /* Set a lower z-index than the dropdown */
 }
 
+/* Indimg styles */
 .indimg {
   width: 325px; /* Adjust width as needed */
   max-width: 100%; /* Prevent images from exceeding their container's width */
-  position: relative;
+  position: relative; /* Keep images in the normal flow */
+  z-index: -1; /* Lower z-index than dropdown */
 }
+
+
 
 .indimg img {
   width: 100%; /* Ensure images take full width of their container */
@@ -165,9 +156,7 @@
       text-align: left; /* Align text to the left */
   }
 
-  .dropdown-content {
-      min-width: 100%; /* Ensure dropdown content is full width on small screens */
-  }
+  
 
   .imageContainer {
       flex-direction: column; /* Stack images vertically */
@@ -189,12 +178,6 @@
       padding: 10px; /* Adjust padding */
   }
 
-  .dropbtn {
-      font-size: 14px; /* Adjust button font size */
-      padding: 10px; /* Adjust button padding */
-  }
-
-  .dropdown-content a {
-      padding: 10px; /* Adjust padding for dropdown links */
-  }
+  
+  
 }

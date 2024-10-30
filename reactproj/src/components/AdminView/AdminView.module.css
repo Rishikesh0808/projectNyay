@@ -1,0 +1,23 @@
+/* AdminView.module.css */
+.navbar {
+    background-color: black;
+    height: 180px; /* Adjust height here */
+    
+  }
+  .whole
+  {
+    height: 50vh;
+  }
+  .navbar-brand {
+    color: white;
+    font-size: 24px; /* Adjust font size here */
+    position :relative;
+   top:-50px;
+  }
+  
+  .nav-button {
+    margin: 0 10px;
+    position :relative;
+    bottom:-30px;
+  }
+  

@@ -4,31 +4,60 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #000; /* Dark gray background for the entire page */
+    background-color:  #f8f9fa; /* Dark gray background for the entire page */
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
   }
-  .register{
-    padding: 0.75rem 1.5rem;
-    border: none;
-    background-color: #fff; /* Blue background for the button */
-    color: #000; /* White text color for the button */
-    border-radius: 3px;
+  .button, .register {
+    padding: 0.75rem 1.5rem; /* Consistent padding */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Softer corners */
     cursor: pointer;
-    margin-left:auto;
+    font-size: 1rem; /* Consistent font size */
+    transition: all 0.3s ease; /* Smooth transitions for effects */
   }
-  .buttoncontainer
-  {
-     display:flex;
+  
+  .button {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white; /* White text for contrast */
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2); /* Subtle shadow */
   }
+  
+  .button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: translateY(-2px); /* Lift effect */
+  }
+  
+  .register {
+    background-color: gray; /* Bootstrap success color */
+    color: black; /* White text for contrast */
+    margin-left: 1rem; /* Space between buttons */
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.2); /* Subtle shadow */
+  }
+  
+  .register:hover {
+    background-color: seashell; /* Darker shade on hover */
+    transform: translateY(-2px); /* Lift effect */
+  }
+  
+  /* Additional styles for button container */
+  .buttoncontainer {
+    display: flex;
+    justify-content: center; /* Center buttons */
+    margin-top: 20px; /* Space above buttons */
+  }
+  
+  
   .formGroup {
     margin-bottom: 15px;
+    
 }
 
-.formGroupLabel {
+.formGroup .formGroupLabel {
     display: block;
     margin-bottom: 5px;
     margin-right:10px;
+    color:white;
 }
 
 input[type="radio"] {
@@ -59,65 +88,49 @@ margin-right:8px;
     padding: 10px; /* Padding around the text */
     border-radius: 5px; /* Rounded corners */
 }
-h1::before,
-h1::after {
-    content: ""; /* Create a pseudo-element */
-    display: inline-block; /* Allow for sizing */
-    width: 100px; /* Length of the line */
-    height: 2px; /* Thickness of the line */
-    background-color: white; /* Color of the line */
-    margin: 0 20px; /* Space between the lines and title */
-    vertical-align: middle; /* Align vertically with the title */
+
+.loginForm {
+  background: black; /* Black background for the form */
+  padding: 2rem;
+  border-radius: 10px; /* Increased border-radius for a softer look */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Softer shadow for depth */
+  max-width: 100%; /* Form width adjusts to screen size */
+  width: 400px; /* Default width for larger screens */
+  color: white; /* White text color for better readability */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  transition: transform 0.3s ease; /* Transition for hover effect */
 }
 
-  .loginForm {
-    background:  #fff; /* Black background for the form */
-    padding: 2rem;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Slightly stronger shadow for better contrast */
-    max-width: 100%; /* Form width adjusts to screen size */
-    width: 400px; /* Default width for larger screens */
-    color: #000; /* White text color for better readability */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-  }
+/* Hover effect for the card */
+.loginForm:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
   
   .formGroup {
     margin-bottom: 1rem;
   }
   
-  .formGroupLabel {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #000; /* Light gray color for labels */
-  }
+  
   
   .formGroupInput {
     width: 100%;
     padding: 0.5rem;
     border: 1px solid #555; /* Darker border color */
     border-radius: 3px;
-    background-color: #000; /* Dark background for input fields */
-    color: #fff; /* White text color for input fields */
+    background-color: #fff; /* Dark background for input fields */
+    color: #000; /* White text color for input fields */
   }
   
-  .button {
-    padding: 0.75rem 1.5rem;
-    border: none;
-    background-color: #fff; /* Blue background for the button */
-    color: #000; /* White text color for the button */
-    border-radius: 3px;
-    cursor: pointer;
+  
+  .heading{
+    color:black;
   }
   
-  .buttonHover:hover {
-    background-color: #ac96962a; /* Darker blue on hover */
-  }
-  .register:hover{
-    background-color: #ac96962a; 
-  }
   .errorMessage {
     color: #ff0000; /* Red color for error messages */
     margin: 1rem 0;
+    font-size: 0.9rem; /* Slightly smaller font for clarity */
   }
   
   /* Media queries for responsiveness */

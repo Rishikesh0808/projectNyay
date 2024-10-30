@@ -6,6 +6,12 @@ const paymentRoutes = require('./routes/payment.route'); // Import payment route
 const petRoutes=require('./routes/petiton.route');
 const trackRoutes=require('./routes/cases.route');
 const registerRoutes=require('./routes/register.route');
+const lawyerroutes=require('./routes/getlawyers.route')
+const policeroutes=require('./routes/getPetitions.route.js')
+const  notingRoutes=require('./routes/noting.route.js');
+const retrieveRoutes=require('./routes/retrieve.route');
+const addpoliceRoutes=require('./routes/addpolice.route');
+const addcasesRoutes=require('./routes/addcase.route.js')
 const cors = require('cors');
 const jwtmiddleware=require('./middleware/jwtverification')
 // Initialize environment variables
@@ -25,12 +31,17 @@ connectDB().then(() => {
 // Middleware
 app.use(express.json()); // For parsing application/json
 app.use(cors());
-app.use(jwtmiddleware);
+//app.use(jwtmiddleware);
 // Routes
 app.use('', authRoutes); // Use auth routes
 app.use('', paymentRoutes); // Use payment routes
 app.use('',petRoutes)
 app.use('', trackRoutes)
-app.use('',registerRoutes)
-
+app.use('',registerRoutes);
+app.use('',lawyerroutes);
+app.use('',policeroutes);
+app.use('',notingRoutes);
+app.use('',retrieveRoutes);
+app.use('',addpoliceRoutes);
+app.use('',addcasesRoutes)
 module.exports = app;

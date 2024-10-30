@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import React, { useState} from 'react';
+import {useNavigate} from "react-router-dom"
+import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from './e-pay.module.css';
-
+import axios from 'axios'
 const EpayForm = () => {
-  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     CNR: '',
     name: '',
@@ -13,10 +12,9 @@ const EpayForm = () => {
     caseRegistrationDate: '',
     paymentAmount: '',
   });
-
+  const navigate=useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -55,113 +53,117 @@ const EpayForm = () => {
   };
 
   return (
-    <div className={styles.Main}>
-      <div className={styles.card}>
-        <h1 className={styles.formTitle}>E-CHALLAN FORM</h1>
-        <form
-          className={`${styles.myform} ${isSubmitting ? styles.formLoading : ''}`}
-          onSubmit={handleSubmit}
-        >
-          <label htmlFor="CNR" className={styles.label}>CNR Number:</label>
-          <input
-            type="text"
-            id="CNR"
-            name="CNR"
-            placeholder="Enter CNR number"
-            className={styles.inputText}
-            value={formData.CNR}
-            onChange={handleChange}
-            required
-          />
+    <div className={`container d-flex justify-content-center align-items-center ${styles.formContainer}`}>
+      <div className={`${styles.formCard} card shadow p-5`}>
+        <h2 className={`${styles.formTitle} text-center mb-4`}>E-CHALLAN</h2>
+        <form onSubmit={handleSubmit} className="needs-validation" noValidate>
+          <div className="mb-3">
+            <label htmlFor="CNR" className={`${styles.label} form-label`}>CNR Number</label>
+            <input
+              type="text"
+              id="CNR"
+              name="CNR"
+              placeholder="Enter CNR number"
+              className={`${styles.inputField} form-control`}
+              value={formData.CNR}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-          <label htmlFor="name" className={styles.label}>Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Enter your name"
-            className={styles.inputText}
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+          <div className="mb-3">
+            <label htmlFor="name" className={`${styles.label} form-label`}>Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              className={`${styles.inputField} form-control`}
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-          <label htmlFor="age" className={styles.label}>Age:</label>
-          <input
-            type="number"
-            id="age"
-            name="age"
-            placeholder="Enter your age"
-            className={styles.inputText}
-            value={formData.age}
-            onChange={handleChange}
-            required
-          />
+          <div className="mb-3">
+            <label htmlFor="age" className={`${styles.label} form-label`}>Age</label>
+            <input
+              type="number"
+              id="age"
+              name="age"
+              placeholder="Enter your age"
+              className={`${styles.inputField} form-control`}
+              value={formData.age}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-          <label className={styles.label}>Gender:</label>
-          <div className={styles.genderContainer}>
-            <div>
-              <input
-                type="radio"
-                id="male"
-                name="gender"
-                value="Male"
-                className={styles.radio}
-                checked={formData.gender === 'Male'}
-                onChange={handleChange}
-                required
-              />
-              <label htmlFor="male" className={styles.label}>Male</label>
-            </div>
-            <div>
-              <input
-                type="radio"
-                id="female"
-                name="gender"
-                value="Female"
-                className={styles.radio}
-                checked={formData.gender === 'Female'}
-                onChange={handleChange}
-                required
-              />
-              <label htmlFor="female" className={styles.label}>Female</label>
+          <div className="mb-4">
+            <label className={`${styles.label} form-label`}>Gender</label>
+            <div className="d-flex justify-content-between">
+            <div className={`${styles.genderContainer} d-flex`}>
+  <div className="form-check">
+    <input
+      type="radio"
+      id="male"
+      name="gender"
+      value="Male"
+      className="form-check-input"
+      checked={formData.gender === 'Male'}
+      onChange={handleChange}
+      required
+    />
+    <label htmlFor="male" className="form-check-label">Male</label>
+  </div>
+  <div className="form-check">
+    <input
+      type="radio"
+      id="female"
+      name="gender"
+      value="Female"
+      className="form-check-input"
+      checked={formData.gender === 'Female'}
+      onChange={handleChange}
+      required
+    />
+    <label htmlFor="female" className="form-check-label">Female</label>
+  </div>
+</div>
+
             </div>
           </div>
 
-          <label htmlFor="caseRegistrationDate" className={styles.label}>Date of Case Registration:</label>
-          <input
-            type="date"
-            id="caseRegistrationDate"
-            name="caseRegistrationDate"
-            className={styles.inputDate}
-            value={formData.caseRegistrationDate}
-            onChange={handleChange}
-            required
-          />
+          <div className="mb-3">
+            <label htmlFor="caseRegistrationDate" className={`${styles.label} form-label`}>Date of Case Registration</label>
+            <input
+              type="date"
+              id="caseRegistrationDate"
+              name="caseRegistrationDate"
+              className={`${styles.inputField} form-control`}
+              value={formData.caseRegistrationDate}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-          <label htmlFor="paymentAmount" className={styles.label}>Payment Amount:</label>
-          <input
-            type="number"
-            id="paymentAmount"
-            name="paymentAmount"
-            placeholder="Enter payment amount"
-            className={styles.inputText}
-            value={formData.paymentAmount}
-            onChange={handleChange}
-            required
-          />
+          <div className="mb-3">
+            <label htmlFor="paymentAmount" className={`${styles.label} form-label`}>Payment Amount</label>
+            <input
+              type="number"
+              id="paymentAmount"
+              name="paymentAmount"
+              placeholder="Enter payment amount"
+              className={`${styles.inputField} form-control`}
+              value={formData.paymentAmount}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-          <button type="submit" className={styles.button} disabled={isSubmitting}>
-            {isSubmitting ? 'Submitting...' : 'Submit'}
+          <button type="submit" className={`${styles.submitButton} btn btn-dark w-100`}>
+            Submit →
           </button>
-
-          {isSubmitting && (
-            <div className={styles.loadingOverlay}>
-              <div className={styles.loadingSpinner}></div>
-            </div>
-          )}
-
-          {error && <div className={styles.error}>{error}</div>}
         </form>
       </div>
     </div>

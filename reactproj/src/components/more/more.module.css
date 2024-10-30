@@ -1,0 +1,20 @@
+/* More.module.css */
+
+.dropdownMenu {
+    background-color: #d3d3d3; /* Gray background for the dropdown */
+    border-radius: 0.25rem; /* Optional: To match Bootstrap's default border radius */
+    z-index: 2000; /* Ensure it is above other elements */
+    position: absolute; /* Positioning */
+    min-width: 160px; /* Minimum width for dropdown */
+  }
+  
+  /* Add styles for dropdown items */
+  .dropdownItem {
+    padding: 10px 20px; /* Add padding */
+    color: #212529; /* Text color */
+  }
+  
+  .dropdownItem:hover {
+    background-color: #a9a9a9; /* Darker gray on hover */
+  }
+  

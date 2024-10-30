@@ -1,0 +1,102 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Hero Section */
+  .heroSection {
+    margin-top:150px;
+    height: 70vh;
+    background-color: #e8f5e9;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('https://images.unsplash.com/photo-1543353071-087092ec393e');
+    animation: fadeIn 2s ease-out;
+  }
+  
+  .heroTitle {
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: slideDown 1.5s ease-out;
+  }
+  .heroTitle::before,
+.heroTitle::after {
+  content: ""; /* Create a pseudo-element */
+  display: inline-block; /* Allow for sizing */
+  width: 100px; /* Length of the line */
+  height: 2px; /* Thickness of the line */
+  background-color: black; /* Color of the line */
+  margin: 0 20px; /* Space between the lines and title */
+  vertical-align: middle; /* Align vertically with the title */
+}
+  
+  .heroSubtitle {
+    font-size: 1.25rem;
+    margin: 20px 0;
+    color: #4e4e4e;
+  }
+  
+  .heroButtons .btn {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    margin-right:20px;
+  }
+  
+  /* Features Section */
+  .featuresSection {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .featureCard {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .featureCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cardTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2e7d32;
+  }
+  
+  .cardText {
+    font-size: 0.95rem;
+    color: #6c757d;
+  }
+  
+  /* Animations */
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  

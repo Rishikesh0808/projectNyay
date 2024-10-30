@@ -1,0 +1,43 @@
+/* Outer container styling */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f9; /* Light background to distinguish the card */
+    padding: 20px;
+}
+
+/* Card styling */
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow for a lifted effect */
+    padding: 30px;
+    
+    width: 50%;
+      display:flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+   
+}
+
+/* Heading styling */
+.heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #004080; /* Dark blue for a professional look */
+   
+}
+
+/* Acknowledgment number styling */
+.acknowledgment {
+    font-size: 18px;
+    color: #333;
+    background-color: #e6f2ff; /* Light blue background for emphasis */
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: 500;
+    margin-top: 10px;
+}

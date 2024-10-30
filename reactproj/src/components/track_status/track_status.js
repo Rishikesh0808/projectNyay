@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./track_status.module.css"; // Modular CSS import
+import styles from "./track_status.module.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
@@ -8,14 +8,13 @@ const Track_status = () => {
   const [formData, setFormData] = useState({
     Plaintiff: "",
     district: "",
-    courtDetails: "", // Ensure this is initialized
+    courtDetails: "",
     caseNumber: "",
     filingDate: "",
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    console.log(name, value); // Debugging line
     setFormData((prevState) => ({
       ...prevState,
       [name]: value,
@@ -24,7 +23,7 @@ const Track_status = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const token = localStorage.getItem('jwt');
+    const token = localStorage.getItem("jwt");
 
     try {
       await axios.get("http://localhost:3005/tracks", {
@@ -41,20 +40,17 @@ const Track_status = () => {
 
   return (
     <div className={styles.Main}>
-      <div className={styles.card}>
+      <div className={`${styles.card} card`}>
         <h2 className={styles.formTitle}>Case Status Tracking Form</h2>
-        <form onSubmit={handleSubmit} className={styles.myform}>
-          <fieldset className={styles.fieldset}>
-            <legend className={styles.legend}>Court Details</legend>
-            <label htmlFor="court" className={styles.label}>
-              Court
-            </label>
+        <form onSubmit={handleSubmit}>
+          <div className="mb-3">
+            <label htmlFor="court" className={styles.label}>Court</label>
             <select
-              name="courtDetails" // Match this with state field
+              name="courtDetails"
               id="court"
-              value={formData.courtDetails} // Use courtDetails from state
+              value={formData.courtDetails}
               onChange={handleChange}
-              className={styles.select}
+              className={`form-select ${styles.select}`}
               required
             >
               <option value="">-- Select --</option>
@@ -191,54 +187,49 @@ const Track_status = () => {
                 <option value="Bhuvanagiri Civil Court">Bhuvanagiri Civil Court</option>
               </optgroup>
             </select>
-          </fieldset>
+          </div>
 
-          <fieldset className={styles.fieldset}>
-            <label htmlFor="Plaintiff" className={styles.label}>
-              Plaintiff:
-            </label>
+          <div className="mb-3">
+            <label htmlFor="Plaintiff" className={styles.label}>Plaintiff:</label>
             <input
               type="text"
               name="Plaintiff"
               id="Plaintiff"
               value={formData.Plaintiff}
               onChange={handleChange}
-              className={styles.inputText}
+              className={`form-control ${styles.inputText}`}
               required
             />
-          </fieldset>
+          </div>
 
-          <fieldset className={styles.fieldset}>
-            <legend className={styles.legend}>Case Details</legend>
-            <label htmlFor="caseNumber" className={styles.label}>
-              Case Number:
-            </label>
+          <div className="mb-3">
+            <label htmlFor="caseNumber" className={styles.label}>Case Number:</label>
             <input
               type="text"
               name="caseNumber"
               id="caseNumber"
               value={formData.caseNumber}
               onChange={handleChange}
-              className={styles.inputText}
+              className={`form-control ${styles.inputText}`}
               required
             />
+          </div>
 
-            <label htmlFor="filingDate" className={styles.label}>
-              Filing Date:
-            </label>
+          <div className="mb-3">
+            <label htmlFor="filingDate" className={styles.label}>Filing Date:</label>
             <input
               type="date"
               name="filingDate"
               id="filingDate"
               value={formData.filingDate}
               onChange={handleChange}
-              className={styles.inputDate}
+              className={`form-control ${styles.inputDate}`}
               required
             />
-          </fieldset>
+          </div>
 
           <button type="submit" className={styles.button}>
-            Submit
+            Submit <span className={styles.arrowIcon}>&#8594;</span>
           </button>
         </form>
       </div>

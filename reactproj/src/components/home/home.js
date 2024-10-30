@@ -1,8 +1,14 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import {React,useState,useEffect} from 'react';
+import { useNavigate, } from 'react-router-dom';
 import styles from './home.module.css';
+import More from '../more/more';
 
 const Home = () => {
+ 
+ 
+
+// Conditional rendering
+
   const navigate = useNavigate();
 
   const handleEpayClick = () => {
@@ -13,16 +19,25 @@ const Home = () => {
     <div>
       <div className={styles.navbar}>
         <div className={styles.tit}>NYAY</div>
-        <a href="#help">Help</a>
-        <div className={styles.dropdown}>
-          
+        <div className={styles.buttons} onClick={()=>{}}>
+        LOG OUT
         </div>
+        <div className={styles.buttons} onClick={()=>{}}>
+        ABOUT US
+        </div>
+        <div className={styles.buttons} onClick={()=>{navigate('/lawyers')}}>
+        PRIVATE LAWYERS
+        </div>
+        <div className={styles.buttons} onClick={()=>{}}>
+        CHECK UPDATE
+        </div>
+        
         
       </div>
 
       <div className={styles.imageContainer}>
         <div className={styles.indimg}>
-          <img src="./law-firm-justice-logo_231093-186.avif" alt="Description of the image" onClick={()=>{navigate('/FIR')}}/>
+          <img src="./law-firm-justice-logo_231093-186.avif" alt="Description of the image" onClick={()=>{{navigate('/FIR')}}}/>
           <figcaption>FILE FIR</figcaption>
         </div>
         <div className={styles.indimg} onClick={()=>{navigate('/trackstatus')}}>

@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState ,useEffect,useHistory} from 'react';
 import styles from './loginForm.module.css'; // Import the CSS module
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 function LoginForm() {
+  
+
+  
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [role, setRole] = useState(''); // State for role selection
   const navigate = useNavigate();
-
+   
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -22,8 +25,13 @@ function LoginForm() {
       const response = await axios.post("http://localhost:3005/login", { username, password, role });
       const token = response.data;
       console.log(token);
+      localStorage.setItem('isLoggedIn',"true");
       localStorage.setItem('jwt', token);
-      navigate('/Home');
+      
+      navigate('/home')
+      
+      
+     
     } catch {
       console.log('Login failed');
     }
@@ -32,7 +40,7 @@ function LoginForm() {
   return (
     <div className={styles.App}>
       <div className={styles.container}>
-        <h1>NYAY</h1>
+        <h1 className={styles.heading}>NYAY</h1>
         <form onSubmit={handleSubmit} className={styles.loginForm}>
           <div className={styles.formGroup}>
             <h2 style={{ color: "black", textAlign: "center" }}>LOGIN</h2>

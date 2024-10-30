@@ -10,7 +10,8 @@ const petitionSchema = new mongoose.Schema({
     incidentLocation: { type: String, required: true },
     incidentDescription: { type: String, required: true },
     policeStation: { type: String, required: true },
-    acknowledgement_no:{ type:String,required:true}
+    acknowledgement_no:{ type:String,required:true},
+    status:String
 }, { collection: 'petitions' });
 
 const Petition = mongoose.model('Petitions', petitionSchema);

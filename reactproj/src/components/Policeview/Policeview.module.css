@@ -1,0 +1,48 @@
+.carouselContainer {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 10px;
+    top:-100px;
+  }
+  
+  .card {
+    position: relative; /* Required for z-index */
+    
+    padding: 120px; /* Adjust padding for content */
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    z-index: 1; /* Base z-index */
+   
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition effects */
+  }
+  
+  .card:hover {
+    transform: scale(1.12); /* Scale the card on hover */
+    z-index: 10; /* Bring the hovered card above others */
+    transition-duration: 0.9s; /* Duration of the hover transition */
+  }
+  
+  .caption {
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top:-250px;
+    font-size: 30px;
+    z-index: 1; /* Ensure caption is above the card */
+  }
+  
+  .arrowButton {
+    background-color: #333;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+  }
+  

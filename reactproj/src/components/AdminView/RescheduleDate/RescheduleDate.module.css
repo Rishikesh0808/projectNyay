@@ -1,0 +1,27 @@
+.calendarContainer {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .timelineContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+  }
+  
+  .dateSlider {
+    width: 100%;
+    max-width: 600px;
+    cursor: pointer;
+    accent-color: #333;
+  }
+  
+  .dateDisplay {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+  }
+  
