@@ -24,7 +24,8 @@ const petitioning = async (req, res) => {
             incidentLocation,
             incidentDescription,
             policeStation,
-            acknowledgement_no  // Include the ack field in the document
+            acknowledgement_no,
+            status:"new"  // Include the ack field in the document
         });
 
         console.log('New Petition:', newpetition);

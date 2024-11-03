@@ -9,9 +9,16 @@
   }
   
   .content {
-    text-align: center;                /* Center text within the content div */
+    text-align: center;           
+    position:relative;
+    top:-50px;     /* Center text within the content div */
   }
-  
+  .header
+  {
+    position:relative;
+    top:-220px;
+    left:650px;
+  }
   .btn {
     background-color: transparent;     /* Transparent button background */
     border-color: white;               /* White border color for buttons */
@@ -22,4 +29,4 @@
     background-color: white;           /* White background on hover */
     color: black;                      /* Black text on hover */
   }
-  
+ 

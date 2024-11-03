@@ -27,13 +27,24 @@ function LoginForm() {
       console.log(token);
       localStorage.setItem('isLoggedIn',"true");
       localStorage.setItem('jwt', token);
-      
-      navigate('/home')
+      localStorage.setItem('userId',username);
+     if(role=='Citizen')
+     {
+      (navigate('/Home'))}
+      else if(role=='Police')
+      {
+        navigate('/MainPolice')
+      }
+      else if(role=='Admin')
+      {
+        navigate('/Admin')
+      }
+     
       
       
      
     } catch {
-      console.log('Login failed');
+     alert("RECORD HAS NOT BEEN FOUND");
     }
   };
 
@@ -100,7 +111,7 @@ function LoginForm() {
 
           <div className={styles.buttoncontainer}>
             <button type="submit" className={`${styles.button} ${styles.buttonHover}`}>Login</button>
-            <button type="button" className={styles.register} onClick={() => { navigate('register'); }}>Register</button>
+            <button type="button" className={styles.register} onClick={() => { navigate('/register'); }}>Register</button>
           </div>
         </form>
       </div>

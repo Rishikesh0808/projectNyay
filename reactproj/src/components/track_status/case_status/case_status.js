@@ -46,8 +46,8 @@ const CaseStatus = () => {
                         </thead>
                         <tbody>
                             <tr>
-                                <td className={styles.td}>{caseDetails.case_Number}</td>
-                                <td className={styles.td}>{caseDetails.case_status}</td>
+                                <td className={styles.td}>{caseDetails.caseNumber}</td>
+                                <td className={styles.td}>{caseDetails.casestatus}</td>
                                 <td className={styles.td}>{caseDetails.first_hearing}</td>
                                 <td className={styles.td}>{caseDetails.recent_hearing}</td>
                                 <td className={styles.td}>{caseDetails.petitioner_name}</td>

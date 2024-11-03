@@ -1,0 +1,27 @@
+.about-us {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+h2 {
+    color:Black;
+}
+
+.admin-contacts {
+    list-style: none;
+    padding: 0;
+}
+
+.admin-contacts li {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    background-color: #ecf0f1;
+}

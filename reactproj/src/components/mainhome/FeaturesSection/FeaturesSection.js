@@ -7,8 +7,8 @@ import FeatureCard from './FeatureCard/FeatureCard';
 
 const features = [
   { title: 'Track Status', text: 'Your Court case details will be tracked here.' },
-  { title: 'File Online FIR', text: 'To file FIR through online and register the complaint in the court.' },
-  { title: 'E-Challan', text: 'To pay the pending amount or fines to court.' },
+  { title: 'File Online FIR', text: 'To file FIR through online and register the complaint in the Police Station' },
+  { title: 'E-Pay', text: 'To pay the pending amount or fines to court.' },
 ];
 
 const FeaturesSection = () => {

@@ -6,7 +6,7 @@ const register=async (req,res)=>{
     const newuser=new User({
         username:username ,
         password:password,
-        role:"citizen"
+        role:"Citizen"
     })
     console.log(newuser);
 

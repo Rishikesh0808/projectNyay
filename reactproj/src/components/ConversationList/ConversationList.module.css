@@ -1,0 +1,36 @@
+.conversationList {
+    max-width: 300px;
+    border-right: 1px solid #ccc;
+    padding: 10px;
+    overflow-y: auto;
+  }
+  
+  .clientItem {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .clientItem:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .clientAvatar {
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    border-radius: 50%; /* Makes it circular */
+    margin-right: 10px; /* Space between avatar and name */
+  }
+  
+  .clientInfo {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .latestMessage {
+    font-size: 0.9em; /* Slightly smaller font for latest message */
+    color: #777; /* Grey color for latest message text */
+  }
+  

@@ -43,9 +43,12 @@ const EpayForm = () => {
       });
 
       console.log('Response:', response.data);
+      localStorage.setItem('Fine',response.data.Fine);
       navigate('/update');
+      
     } catch (error) {
-      console.error('Request failed:', error.message);
+      console.log('Request failed:', error.message);
+      alert("RECORD NOT FOUND");
       setError('Failed to submit form. Please try again later.');
     } finally {
       setIsSubmitting(false);
@@ -55,7 +58,7 @@ const EpayForm = () => {
   return (
     <div className={`container d-flex justify-content-center align-items-center ${styles.formContainer}`}>
       <div className={`${styles.formCard} card shadow p-5`}>
-        <h2 className={`${styles.formTitle} text-center mb-4`}>E-CHALLAN</h2>
+        <h2 className={`${styles.formTitle} text-center mb-4`}>E-PAY</h2>
         <form onSubmit={handleSubmit} className="needs-validation" noValidate>
           <div className="mb-3">
             <label htmlFor="CNR" className={`${styles.label} form-label`}>CNR Number</label>

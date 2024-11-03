@@ -26,7 +26,7 @@ const AddCaseForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // Send data to backend (adjust URL as needed)
+
       const response = await axios.post('http://localhost:3005/addcase', formData);
       console.log(response.data);
       if (response.status === 201) {

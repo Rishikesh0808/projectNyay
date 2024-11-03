@@ -18,8 +18,12 @@ import Policeview2 from './components/Policeview/Policeview2/Policeview2';
 import AdminView from './components/AdminView/AdminView';
 import AddPoliceOfficerForm from './components/AdminView/AddPoliceOfficerForm/AddPoliceOfficerForm';
 import AddCaseForm from './components/AdminView/Addcases/Addcases';
-import RescheduleDate from './components/AdminView/RescheduleDate/RescheduleDate';
-import CalendarControl from './components/AdminView/CALENDARONTROL/CALENDARONTROL';
+import ChatComponent from './components/ChatComponent/ChatComponent';
+import LawyerChatInterface from'./components/LawyerChatInterface/LawyerChatInterface';
+import CheckAcknowledgment from './components/CheckAcknowledgement/CheckAcknowledgement';
+import AddLawyers from './components/AdminView/addLawyers/addLawyers';
+import AboutUs from './components/AboutUs/AboutUs';
+import AddFines from './components/AdminView/AddFines/AddFines';
 const App = () => {
   return (
     
@@ -28,25 +32,29 @@ const App = () => {
        
         
           
-         {/* <Route path="/" element={<Mainhome/>}/>  */}
-         {/* <Route path="/" element={<MainPolice/>}/> */}
-         {/* <Route path="/" element={<AdminView/>}/> */}
-         <Route path="/" element={<RescheduleDate/>}/>
+          <Route path="/" element={<Mainhome/>}/> 
+         <Route path="/MainPolice" element={<MainPolice/>}/> 
+         <Route path="/Admin" element={<AdminView/>}/> 
+         
+         <Route path="/Chat" element={<ChatComponent/>}/>
          <Route path="/retrieve" element={<Policeview2/>}/>
          <Route path="/view" element={<Policeview/>}/>  
         <Route path="/login" element={<LoginForm/>}/>
         <Route path="/update" element={<UpdatedPayment/>}/>
-        <Route path="/Home" element={<Home/>}/>
+       <Route path="/check" element={<CheckAcknowledgment/>}></Route>
+         <Route path="/Home" element={<Home/>}/>
         <Route path="/epay" element={<EpayForm />} />
         <Route path="/FIR" element={<FIRForm />} />
         <Route path="/filed" element={<Filed />} />
         <Route path="/lawyers" element={<Lawyerinfo/>}/>
         <Route path="/trackstatus" element={<Track_status />} />
         <Route path="/case/:caseNumber" element={<Case_status />} />
-        <Route path="register" element={<RegisterForm />}></Route>
+        <Route path="/register" element={<RegisterForm />}></Route>
         <Route path="/addpolice" element={<AddPoliceOfficerForm></AddPoliceOfficerForm>}></Route>
         <Route path="/addcase" element={<AddCaseForm/>}></Route>
-        <Route path="/reschedule" element={<RescheduleDate/>}></Route>
+        <Route path="/addLawyers" element={<AddLawyers/>}></Route>
+       <Route path="/aboutus" element={<AboutUs/>}></Route>
+       <Route path="/addfines" element={<AddFines/>}/>
       </Routes>
     </Router>
   );

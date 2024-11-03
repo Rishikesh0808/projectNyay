@@ -9,13 +9,13 @@ const AdminView = () => {
       {/* Navbar */}
       <nav className={`navbar navbar-expand-lg ${styles.navbar}`}>
         <div className="container-fluid">
-          
+          <div className={styles.tit}>NYAY</div>
           <div className="collapse navbar-collapse">
             <div className="navbar-nav ms-auto navs">
-              <button className={`btn btn-light ${styles['nav-button']}`} onClick={() => {navigate('addpolice')}}>ADD POLICE OFFICER</button>
+              <button className={`btn btn-light ${styles['nav-button']}`} onClick={() => {navigate('/addpolice')}}>ADD POLICE OFFICER</button>
               <button className={`btn btn-light ${styles['nav-button']}`} onClick={() => {navigate('/addcase')}}>ADD CASES</button>
-              <button className={`btn btn-light ${styles['nav-button']}`} onClick={() => {navigate('reschedule')}}>RESCHEDULE CASE TIMING</button>
-              <button className={`btn btn-light ${styles['nav-button']}`} onClick={() => alert('Add Court Fines clicked!')}>ADD COURT FINES</button>
+              <button className={`btn btn-light ${styles['nav-button']}`} onClick={() => {navigate('/addLawyers')}}>ADD LAWYERS</button>
+              <button className={`btn btn-light ${styles['nav-button']}`} onClick={() =>{navigate('/addfines')}}>ADD COURT FINES</button>
             </div>
           </div>
         </div>

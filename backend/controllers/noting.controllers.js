@@ -5,7 +5,7 @@ const noting= async (req, res) => {
       // Update petition where ack matches, setting status to 'acknowledged'
       const updatedPetition = await Petition.findOneAndUpdate(
         { ack },
-        { status: 'acknowledged' },
+        { status: 'noted' },
         {new:true}
       );
     

@@ -73,30 +73,32 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around; /* Center items with even space between */
-  gap: 20px; /* Adjust gap between items */
+  gap: 2px; /* Adjust gap between items */
   position: relative; /* Ensure it does not escape the flow */
   z-index: 1; /* Set a lower z-index than the dropdown */
+  padding-top:20px;
 }
 
 /* Indimg styles */
 .indimg {
-  width: 325px; /* Adjust width as needed */
+  width: 375px; /* Adjust width as needed */
   max-width: 100%; /* Prevent images from exceeding their container's width */
   position: relative; /* Keep images in the normal flow */
   z-index: -1; /* Lower z-index than dropdown */
-}
+  }
 
 
 
 .indimg img {
   width: 100%; /* Ensure images take full width of their container */
   max-width: 100%; /* Prevent images from exceeding their container's width */
-  border: 5px white solid;
+  border: 10px white solid;
+  
   transition: transform 0.3s ease; /* Smooth transition for transform property */
 }
 
 .indimg:hover img {
-  transform: scale(1.057); /* Increase size on hover */
+  transform: scale(1.1); /* Increase size on hover */
 }
 
 .indimg figcaption {
@@ -122,8 +124,42 @@
 .footerContainer {
   background-color: black;
   color: white;
-  margin-top: 30px;
+  margin-top: 35px;
+  min-height: 180px;
+  padding: 20px; /* Optional: Add padding for inner spacing */
+  text-align: left; /* Align text to the left */
 }
+
+.socialLinks {
+  border-top: 1px solid #555; /* Top border for separation */
+  padding-top: 20px; /* Padding for spacing */
+  margin-top: 20px; /* Margin for spacing */
+}
+
+.socialLink {
+  color: white; /* White color for links */
+  margin: 0 10px; /* Spacing between links */
+  text-decoration: none; /* Remove underline */
+}
+
+.socialLink:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.credits {
+  border-top: 1px solid #555; /* Top border for separation */
+  padding: 20px 0; /* Padding for spacing */
+  margin-bottom: 20px; /* Margin for spacing */
+}
+
+.creditsText {
+  color: white; /* Light gray for readability */
+margin-top:10px;
+  margin-left: 5px 0; /* Margin for spacing between lines */
+  margin-right: 5px 0; 
+  margin-bottom: 5px 0; 
+}
+
 
 .topfooter {
   /* Add any specific styles for the top footer if needed */
