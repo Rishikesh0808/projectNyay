@@ -3,9 +3,10 @@ const Petition = require('../models/petition.model.js'); // Replace with your ac
 
 const retrieve = async (req, res) => {
   try {
-    const { ack } = req.params; // Extracts the `ack` parameter from the request
-    console.log(ack);
-    const caseRecord = await Petition.findOne({ ack: ack });
+    const { acknowledgement_no } = req.params;
+          console.log(acknowledgement_no); // Extracts the `ack` parameter from the request
+   
+    const caseRecord = await Petition.findOne({ acknowledgement_no: acknowledgement_no });
 
     if (!caseRecord) {
       return res.status(404).json({ message: 'Case not found' });

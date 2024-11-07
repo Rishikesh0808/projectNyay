@@ -41,7 +41,7 @@ const Track_status = () => {
   return (
     <div className={styles.Main}>
       <div className={`${styles.card} card`}>
-        <h2 className={styles.formTitle}>Case Status Tracking Form</h2>
+        <h2 className={styles.formTitle}> Track Case Status</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label htmlFor="court" className={styles.label}>Court</label>

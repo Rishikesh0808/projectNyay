@@ -1,4 +1,4 @@
-import React from 'react';
+import {useEffect,React}from 'react';
 import { Dropdown } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import styles from './MainPolice.module.css';
@@ -7,7 +7,12 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const MainPolice = () => {
   const navigate = useNavigate();
-
+  useEffect(()=>{
+    if(!localStorage.getItem("userId"))
+    { 
+      navigate('/logout')
+    }
+  },[])
   return (
     <div className={styles.MainPolice}>
       <div className={styles.header}>
@@ -17,7 +22,9 @@ const MainPolice = () => {
             <i className="bi bi-person-circle text-white" style={{ fontSize: '1.5rem' }}></i>
           </Dropdown.Toggle>
           <Dropdown.Menu>
-            <Dropdown.Item onClick={() => navigate('/logout')}>Logout</Dropdown.Item>
+            <Dropdown.Item onClick={() => {
+              localStorage.clear();
+              navigate('/logout')}}>Logout</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
       </div>

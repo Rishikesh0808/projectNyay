@@ -13,7 +13,18 @@
   padding: 2rem;
   background-color: #fff;
   border-radius: 8px;
+  border:2px black solid;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.formTitle::before,
+.formTitle::after {
+  content: ""; /* Create a pseudo-element */
+  display: inline-block; /* Allow for sizing */
+  width: 100px; /* Length of the line */
+  height: 2px; /* Thickness of the line */
+  background-color: black; /* Color of the line */
+  margin: 0 20px; /* Space between the lines and title */
+  vertical-align: middle; /* Align vertically with the title */
 }
 
 .formTitle {

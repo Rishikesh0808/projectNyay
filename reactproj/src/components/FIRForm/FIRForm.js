@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./FIRForm.module.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 const FIRForm = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -180,8 +180,8 @@ const FIRForm = () => {
             ></textarea>
           </div>
 
-          <button type="submit" className={`${styles.submitButton} btn btn-block`}>
-            Submit FIR
+          <button type="submit" className={`${styles.submitButton} btn btn-dark w-100`}>
+            Submit FIR -->
           </button>
         </form>
       </div>

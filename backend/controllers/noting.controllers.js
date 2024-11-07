@@ -1,10 +1,11 @@
 const Petition=require('../models/petition.model')
 const noting= async (req, res) => {
-    const { ack } = req.params;
+    const { acknowledgement_no } = req.params;
     try {
+      console.log(acknowledgement_no);
       // Update petition where ack matches, setting status to 'acknowledged'
       const updatedPetition = await Petition.findOneAndUpdate(
-        { ack },
+        { acknowledgement_no },
         { status: 'noted' },
         {new:true}
       );

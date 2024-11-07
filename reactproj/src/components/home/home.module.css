@@ -4,6 +4,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+.Main{
+transition: 1.5s ease-in;
+}
 
 /* Styling the navigation bar */
 .navbar {
@@ -93,8 +96,8 @@
   width: 100%; /* Ensure images take full width of their container */
   max-width: 100%; /* Prevent images from exceeding their container's width */
   border: 10px white solid;
-  
-  transition: transform 0.3s ease; /* Smooth transition for transform property */
+  transition: transform 0.8s ease; 
+  /* Smooth transition for transform property */
 }
 
 .indimg:hover img {

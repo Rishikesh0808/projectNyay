@@ -1,10 +1,17 @@
-import React from 'react';
+import {useEffect,React} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from './AdminView.module.css';
 import {useNavigate} from 'react-router-dom'
 const AdminView = () => {
   const navigate=useNavigate()
+  useEffect(()=>{
+    if(!localStorage.getItem("userId"))
+    { 
+      navigate('/logout')
+    }
+  },[])
   return (
+    
     <div>
       {/* Navbar */}
       <nav className={`navbar navbar-expand-lg ${styles.navbar}`}>
@@ -16,6 +23,9 @@ const AdminView = () => {
               <button className={`btn btn-light ${styles['nav-button']}`} onClick={() => {navigate('/addcase')}}>ADD CASES</button>
               <button className={`btn btn-light ${styles['nav-button']}`} onClick={() => {navigate('/addLawyers')}}>ADD LAWYERS</button>
               <button className={`btn btn-light ${styles['nav-button']}`} onClick={() =>{navigate('/addfines')}}>ADD COURT FINES</button>
+              <button className={`btn btn-light ${styles['nav-button']}`} onClick={() =>{
+                localStorage.clear();
+                navigate('/logout')}}>LOGOUT</button>
             </div>
           </div>
         </div>

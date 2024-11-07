@@ -58,7 +58,7 @@
 
 /* Header cell styling */
 .th {
-    background-color: #004080; /* Dark blue for header background */
+    background-color: black; /* Dark blue for header background */
     color: #ffffff;
     font-weight: bold;
     text-transform: uppercase;

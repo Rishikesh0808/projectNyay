@@ -42,18 +42,26 @@ const CaseStatus = () => {
                                 <th className={styles.th}>Petitioner Advocate</th>
                                 <th className={styles.th}>Respondent Name</th>
                                 <th className={styles.th}>Respondent Advocate</th>
+                                {/* Conditionally render Next Hearing column if case is not closed */}
+                                {caseDetails.caseStatus !== "Closed" && (
+                                    <th className={styles.th}>Next Hearing</th>
+                                )}
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td className={styles.td}>{caseDetails.caseNumber}</td>
-                                <td className={styles.td}>{caseDetails.casestatus}</td>
+                                <td className={styles.td}>{caseDetails.caseStatus}</td>
                                 <td className={styles.td}>{caseDetails.first_hearing}</td>
                                 <td className={styles.td}>{caseDetails.recent_hearing}</td>
                                 <td className={styles.td}>{caseDetails.petitioner_name}</td>
                                 <td className={styles.td}>{caseDetails.petitioner_advocate}</td>
                                 <td className={styles.td}>{caseDetails.respondent_name}</td>
                                 <td className={styles.td}>{caseDetails.respondent_advocate}</td>
+                                {/* Conditionally render Next Hearing data if case is not closed */}
+                                {caseDetails.caseStatus !== "Closed" && (
+                                    <td className={styles.td}>{caseDetails.next_hearing}</td>
+                                )}
                             </tr>
                         </tbody>
                     </table>

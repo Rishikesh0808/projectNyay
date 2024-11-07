@@ -4,7 +4,7 @@ import axios from 'axios';
 import styles from './Policeview2.module.css';
 
 const Policeview2 = () => {
-  const [acknowledgmentNo, setAcknowledgmentNo] = useState('');
+  const [acknowledgment_no, setAcknowledgmentNo] = useState('');
   const [caseDetails, setCaseDetails] = useState(null);
   const [error, setError] = useState('');
 
@@ -13,7 +13,8 @@ const Policeview2 = () => {
     setError('');
     
     try {
-      const response = await axios.get(`http://localhost:3005/retrieve/${acknowledgmentNo}`);
+      console.log(acknowledgment_no);
+      const response = await axios.get(`http://localhost:3005/retrieve/${acknowledgment_no}`);
       setCaseDetails(response.data);
     } catch (err) {
       setError('Failed to retrieve case. Please check the acknowledgment number.');
@@ -31,7 +32,7 @@ const Policeview2 = () => {
             type="text"
             id="acknowledgmentNo"
             className="form-control"
-            value={acknowledgmentNo}
+            value={acknowledgment_no}
             onChange={(e) => setAcknowledgmentNo(e.target.value)}
             required
           />

@@ -11,7 +11,7 @@ const HeroSection= ()=> {
         <p className={styles.heroSubtitle}>JUDICIARY MADE EASY AND SIMPLE</p>
         <div className={styles.heroButtons}>
           <button className="btn btn-primary btn-lg mr-3" style={{marginRight:"35px",backgroundColor:"black"}} onClick={()=>{navigate('/login')}}>Get started</button>
-          <button className="btn btn-outline-secondary btn-lg">Learn more</button>
+          <button className="btn btn-outline-secondary btn-lg" onClick={()=>{navigate('/learn')}}>Learn more</button>
         </div>
       </div>
     </section>

@@ -24,6 +24,8 @@ import CheckAcknowledgment from './components/CheckAcknowledgement/CheckAcknowle
 import AddLawyers from './components/AdminView/addLawyers/addLawyers';
 import AboutUs from './components/AboutUs/AboutUs';
 import AddFines from './components/AdminView/AddFines/AddFines';
+import LoggedOutPage from './components/LoggedOutPage/LoggedOutPage';
+import LearnMore from './components/learnmore/learnmore';
 const App = () => {
   return (
     
@@ -47,8 +49,10 @@ const App = () => {
         <Route path="/FIR" element={<FIRForm />} />
         <Route path="/filed" element={<Filed />} />
         <Route path="/lawyers" element={<Lawyerinfo/>}/>
+        <Route path="/logout" element={<LoggedOutPage/>}></Route>
         <Route path="/trackstatus" element={<Track_status />} />
         <Route path="/case/:caseNumber" element={<Case_status />} />
+        <Route path="/learn" element={<LearnMore></LearnMore>}/>
         <Route path="/register" element={<RegisterForm />}></Route>
         <Route path="/addpolice" element={<AddPoliceOfficerForm></AddPoliceOfficerForm>}></Route>
         <Route path="/addcase" element={<AddCaseForm/>}></Route>

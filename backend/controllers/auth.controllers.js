@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const authenticate = async (req, res) => {
-    const { username, password } = req.body;
+    const { username, password ,role} = req.body;
 
     // Check if username and password are provided
     if (!username || !password) {
@@ -15,7 +15,7 @@ const authenticate = async (req, res) => {
     const user = await User.findOne({ username });
     
     // Check if the user exists and the password matches
-    if (!user || user.password !== password) {
+    if (!user || user.password !== password||user.role!==role) {
         return res.status(400).json({ message: "Invalid username or password" });
     }
 

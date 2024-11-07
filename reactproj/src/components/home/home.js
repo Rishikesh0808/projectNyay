@@ -6,7 +6,12 @@ import More from '../more/more';
 const Home = () => {
  
  
-
+useEffect(()=>{
+  if(!localStorage.getItem("userId"))
+  { 
+    navigate('/logout')
+  }
+},[])
 // Conditional rendering
 
   const navigate = useNavigate();
@@ -16,10 +21,12 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div className='.Main'>
       <div className={styles.navbar}>
         <div className={styles.tit}>NYAY</div>
-        <div className={styles.buttons} onClick={()=>{}}>
+        <div className={styles.buttons} onClick={()=>{
+          localStorage.clear();
+          navigate('/logout')}}>
         LOG OUT
         </div>
         <div className={styles.buttons} onClick={()=>{navigate('/aboutus')}}>
@@ -53,13 +60,12 @@ const Home = () => {
       <footer className={styles.footerContainer}>
                 {/* Footer Credits Inlined */}
                 <p className={styles.creditsText}>
-                    <strong>Disclaimer:</strong> The content provided here is for general informational purposes only and may not reflect the latest updates in specific cases. Please refer to official sources or consult a legal professional for accurate information.
+ <strong>Disclaimer:</strong> The information provided here is for general guidance only and may not reflect the latest updates or details specific to individual cases. Legal standards and regulations can vary by jurisdiction and change frequently. For accurate and current information tailored to your situation, please consult a qualified legal professional or refer to official sources.
+ Relying solely on this general content without professional consultation may not be suitable for making informed legal decisions.
                 </p>
                 <p className={styles.creditsText}>
-              This project has been created by <b>Lohith</b>,<b>Nihal</b>  and <b>Rishikesh </b> as students passionate about technology and legal accessibility, we have created this platform to empower users with easy access to essential court-related information. Our goal is to foster transparency and understanding within the legal process, making it easier for individuals to navigate their judicial journeys.
-                </p>
-                <p className={styles.creditsText}>
-                    For inquiries or support, please contact us at: <strong>admin@nyay.com</strong>. Together, we can work towards making the judiciary system more transparent and accessible to all.
+                    For inquiries or support, please contact us at: <strong>Nihal@gmail.com</strong>. Together, we can work towards making the judiciary system more transparent and accessible to all.
+                    
                 </p>
                
 

@@ -9,12 +9,14 @@ const Policeview = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedItem, setSelectedItem] = useState(null);
 
-  const handleNote = async (acknowledgement) => {
-    try {
-      const response = await axios.put(`http://localhost:3005/noting/${acknowledgement}`);
+  const handleNote = async (acknowledgement_no) => {
+    try { console.log(acknowledgement_no);
+      const response = await axios.put(`http://localhost:3005/noting/${acknowledgement_no}`);
       console.log(response.data);
+
       if(response.status==='200')
         setSelectedItem(null);
+      alert("NOTED SUCCESFULLY")
     } 
     catch {
       console.log("Failed to note the petition.");
@@ -68,7 +70,7 @@ const Policeview = () => {
               {dummyData.length > 0 ? (
                 <>
                   <h3>{dummyData[currentIndex].name}</h3>
-                  <h3>{dummyData[currentIndex].ack}</h3>
+                  <h3>{dummyData[currentIndex].acknowledgement_no}</h3>
                 </>
               ) : (
                 <p>No petitions available.</p>
@@ -99,7 +101,7 @@ const Policeview = () => {
                 </tbody>
               </table>
               <div className="text-center">
-                <button className="btn btn-primary mt-4" onClick={() => handleNote(selectedItem.ack)}>
+                <button className="btn btn-primary mt-4" onClick={() => handleNote(selectedItem.acknowledgement_no)}>
                   Note
                 </button>
               </div>
