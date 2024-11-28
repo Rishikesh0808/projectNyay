@@ -19,7 +19,6 @@ import AdminView from './components/AdminView/AdminView';
 import AddPoliceOfficerForm from './components/AdminView/AddPoliceOfficerForm/AddPoliceOfficerForm';
 import AddCaseForm from './components/AdminView/Addcases/Addcases';
 import ChatComponent from './components/ChatComponent/ChatComponent';
-import LawyerChatInterface from'./components/LawyerChatInterface/LawyerChatInterface';
 import CheckAcknowledgment from './components/CheckAcknowledgement/CheckAcknowledgement';
 import AddLawyers from './components/AdminView/addLawyers/addLawyers';
 import AboutUs from './components/AboutUs/AboutUs';
@@ -37,7 +36,6 @@ const App = () => {
           <Route path="/" element={<Mainhome/>}/> 
          <Route path="/MainPolice" element={<MainPolice/>}/> 
          <Route path="/Admin" element={<AdminView/>}/> 
-         
          <Route path="/Chat" element={<ChatComponent/>}/>
          <Route path="/retrieve" element={<Policeview2/>}/>
          <Route path="/view" element={<Policeview/>}/>  

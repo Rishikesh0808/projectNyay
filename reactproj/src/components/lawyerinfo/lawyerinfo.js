@@ -63,7 +63,7 @@ const Lawyerinfo = () => {
           >
             <option value="">All</option>
             <option value="Criminal">Criminal</option>
-            <option value="Family">Family</option>
+            <option value="Civil">Civil</option>
             <option value="Corporate">Corporate</option>
           </select>
         </div>

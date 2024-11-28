@@ -16,6 +16,10 @@ const CaseStatus = () => {
                     headers: { Authorization: `Bearer ${localStorage.getItem("jwt")}` },
                 });
                 setCaseDetails(response.data);
+                if(!response)
+                {
+                    alert("Record not found");
+                }
             } catch (err) {
                 setError("Failed to fetch case details. Please try again.");
                 console.error("Error fetching case details:", err);

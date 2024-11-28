@@ -4,6 +4,9 @@ import { useNavigate } from 'react-router-dom';
 const UpdatedPayment = () => {
    const navigate=useNavigate
    const [Fine,setFine]=useState('');
+   useEffect(()=>{
+    setFine(localStorage.getItem('Fine'));
+   },[])
    return (
  <div className={styles.container}>
  <div className={styles.card}>
