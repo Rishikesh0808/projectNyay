@@ -37,7 +37,7 @@ app.get('/api', (req, res) => {
 app.use(express.static(path.join(__dirname, '../reactproj/build/static')));
 
 // Serve the React app for all non-API routes
-app.get('*', (req, res) => {s
+app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../reactproj/build', 'index.html'));
 });
 
