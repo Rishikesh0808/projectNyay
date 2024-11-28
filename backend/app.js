@@ -34,12 +34,12 @@ app.get('/api', (req, res) => {
 
 // Connect to the database
 
-app.use(express.static(path.join(__dirname, '../reactproj/build')));
+app.use(express.static(path.join(__dirname, '../reactproj/build/static')));
 
 // Catch-all route to serve the React index.html for all non-API routes
-app.get('*', (req, res) => {
+/*app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../reactproj/build/static', 'index.html'));
-});
+});*/
 
 
 // Middleware
