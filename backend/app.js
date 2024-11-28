@@ -34,11 +34,11 @@ app.get('/api', (req, res) => {
 
 // Connect to the database
 
-app.use(express.static(path.join(__dirname, '/reactproj/build/')));
+app.use(express.static(path.join(__dirname, '/reactproj/build')));
 
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'reactproj/build/static', 'index.html'));
+  res.sendFile(path.join(__dirname, '../reactproj/build', 'index.html'));
 });
 
 
