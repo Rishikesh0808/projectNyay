@@ -33,14 +33,7 @@ app.get('/api', (req, res) => {
 // If no API routes are matched, serve the React app
 
 // Connect to the database
-connectDB()
-    .then(() => {
-        console.log("Connected to DB");
-    })
-    .catch(err => {
-        console.error("Failed to connect to DB:", err);
-        process.exit(1);
-    });
+
 
 
 
