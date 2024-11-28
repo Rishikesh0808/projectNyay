@@ -17,7 +17,7 @@ const addLawyersRoutes=require('./routes/addLawyers.route.js')
 const messageRoutes = require('./routes/messages.route.js');
 const cors = require('cors');
 const jwtmiddleware = require('./middleware/jwtverification');
-
+const path = require('path');
 // Initialize environment variables
 dotenv.config();
 
@@ -34,7 +34,12 @@ app.get('/api', (req, res) => {
 
 // Connect to the database
 
+app.use(express.static(path.join(__dirname, '../reactproj/build')));
 
+// Catch-all route to serve the React index.html for all non-API routes
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'frontend/build', 'index.html'));
+});
 
 
 // Middleware
