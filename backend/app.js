@@ -23,7 +23,7 @@ dotenv.config();
 
 // Create an Express app
 const app = express();
-app.use(express.static(path.join(__dirname, '../client/build')));
+
 
 // API routes (add your Node.js API routes here)
 app.get('/api', (req, res) => {
@@ -31,9 +31,7 @@ app.get('/api', (req, res) => {
 });
 
 // If no API routes are matched, serve the React app
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
-});
+
 // Connect to the database
 connectDB()
     .then(() => {
