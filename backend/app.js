@@ -34,7 +34,7 @@ app.get('/api', (req, res) => {
 
 // Connect to the database
 
-app.use(express.static(path.join(__dirname, '../reactproj/build/static')));
+app.use(express.static(path.join(__dirname, '../reactproj/build')));
 
 // Serve the React app for all non-API routes
 app.get('*', (req, res) => {
